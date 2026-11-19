@@ -3,8 +3,7 @@ package com.studyplanner.model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-// FIX: removed LocalTime, DateTimeFormatter, DateTimeParseException (not used here;
-//      parsing text into dates is the menu's job)
+
 
 public class Exam {
     private static int nextId = 1;
@@ -16,7 +15,6 @@ public class Exam {
 
     public Exam(String name, LocalDateTime date, Subject subject) {
         update(name, date, subject);
- 
         this.id = nextId;
         nextId++;
     }

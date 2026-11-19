@@ -2,6 +2,7 @@ package com.studyplanner;
 
 import com.studyplanner.model.Difficulty;
 import com.studyplanner.model.Subject;
+import com.studyplanner.service.ExamManager;
 import com.studyplanner.service.SubjectManager;
 import java.util.List;
 import java.util.Scanner;
@@ -10,7 +11,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String text;
-        SubjectManager manager = new SubjectManager();
+        ExamManager examManager = new ExamManager();
+        SubjectManager manager = new SubjectManager(examManager);
         Subject s;
         List<Subject> results;
         int i;
